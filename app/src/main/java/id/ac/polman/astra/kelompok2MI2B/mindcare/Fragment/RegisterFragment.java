@@ -5,8 +5,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
+
 import id.ac.polman.astra.kelompok2MI2B.mindcare.R;
 
 public class RegisterFragment extends Fragment {

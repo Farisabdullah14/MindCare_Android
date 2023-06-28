@@ -2,24 +2,19 @@ package id.ac.polman.astra.kelompok2MI2B.mindcare.Fragment;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
+import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.ViewModelProvider;
 
 import id.ac.polman.astra.kelompok2MI2B.mindcare.R;
-
-
-import id.ac.polman.astra.kelompok2MI2B.mindcare.Service.response.PenggunaResponse;
 import id.ac.polman.astra.kelompok2MI2B.mindcare.viewmodel.PenggunaDetailViewModel;
 
 public class PenggunaFragmentLogin extends Fragment {
@@ -56,12 +51,20 @@ public class PenggunaFragmentLogin extends Fragment {
         mUsername = (EditText) view.findViewById(R.id.login_username);
         mPassword = (EditText) view.findViewById(R.id.login_password);
 
+        FragmentManager fm = getActivity().getSupportFragmentManager();
 
         btnLogin = view.findViewById(R.id.btn_login);
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.i("test", "email "+mUsername.getText() + " dan password "+mPassword.getText());
+
+                DashboardFragment dashboardFragment = new DashboardFragment();
+                fm.beginTransaction()
+                        .replace(R.id.activity_main_fragment_container, dashboardFragment)
+                        .addToBackStack(null)
+                        .commit();
+
+          /*      Log.i("test", "email "+mUsername.getText() + " dan password "+mPassword.getText());
 
                 if (validasi(mUsername, mPassword)) {
                     mPenggunaDetailViewModel.login(mUsername.getText().toString(), mPassword.getText().toString()).observe(getViewLifecycleOwner(), new Observer<PenggunaResponse>() {
@@ -80,7 +83,7 @@ public class PenggunaFragmentLogin extends Fragment {
                     });
                 } else {
                     Toast.makeText(getActivity(), "Username atau Password harus diisi", Toast.LENGTH_SHORT).show();
-                }
+                }*/
             }
         });
 
