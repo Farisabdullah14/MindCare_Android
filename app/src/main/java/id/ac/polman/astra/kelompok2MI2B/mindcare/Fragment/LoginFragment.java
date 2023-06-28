@@ -68,6 +68,18 @@ public class LoginFragment extends Fragment {
                 fm.beginTransaction().replace(R.id.activity_main_fragment_container,fragment).addToBackStack(null).commit();
             }
         });
+
+        mButtonRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = fm.findFragmentById(R.id.activity_main_fragment_container);
+                fragment = new RegisterFragment().newInstance();
+
+                //untuk mengganti ke main fragment lagi
+                fm.beginTransaction().replace(R.id.activity_main_fragment_container,fragment).addToBackStack(null).commit();
+            }
+        });
+
         return view;
     }
 }

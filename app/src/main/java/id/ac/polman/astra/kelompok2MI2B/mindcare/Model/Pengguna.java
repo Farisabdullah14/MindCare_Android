@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey;
 public class Pengguna {
     @PrimaryKey
     @NonNull
-    private int mId;
+    private int mid_user;
     private String mNIM;
     private String mNama;
     private String mUsername;
@@ -16,7 +16,7 @@ public class Pengguna {
 
     private String mAlamat;
 
-    private String mJenisKelamin;
+    private String mjenis_kelamin;
 
     private String status;
 
@@ -26,24 +26,33 @@ public class Pengguna {
     }
 
 
-    public Pengguna(int id, String NIM, String nama, String username, String password, String alamat, String jenisKelamin, String status) {
-        mId = id;
+    public Pengguna(int id_user, String NIM, String nama, String username, String password, String alamat, String jenisKelamin, String status) {
+        mid_user = id_user;
         mNIM = NIM;
         mNama = nama;
         mUsername = username;
         mPassword = password;
         mAlamat = alamat;
-        mJenisKelamin = jenisKelamin;
+        mjenis_kelamin = jenisKelamin;
         this.status = status;
     }
 
-    public int getId() {
-        return mId;
+    public int getMid_user() {
+        return mid_user;
     }
 
-    public void setId(int id) {
-        mId = id;
+    public void setMid_user(int mid_user) {
+        this.mid_user = mid_user;
     }
+
+    public String getMjenis_kelamin() {
+        return mjenis_kelamin;
+    }
+
+    public void setMjenis_kelamin(String mjenis_kelamin) {
+        this.mjenis_kelamin = mjenis_kelamin;
+    }
+
 
     public String getNIM() {
         return mNIM;
@@ -83,14 +92,6 @@ public class Pengguna {
 
     public void setAlamat(String alamat) {
         mAlamat = alamat;
-    }
-
-    public String getJenisKelamin() {
-        return mJenisKelamin;
-    }
-
-    public void setJenisKelamin(String jenisKelamin) {
-        mJenisKelamin = jenisKelamin;
     }
 
     public String getStatus() {

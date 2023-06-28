@@ -13,21 +13,20 @@
         android:src="@drawable/asset1" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="168dp"
         android:layout_height="wrap_content"
-        android:text="Register"
-        android:textColor="#2d66dc"
-        android:textSize="40dp"
-        android:textStyle="bold"
         android:layout_gravity="start"
         android:layout_marginLeft="35dp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:text="Register"
+        android:textColor="#2d66dc"
+        android:textSize="25dp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <EditText
             android:id="@+id/editTextNIM"
@@ -37,10 +36,11 @@
             android:background="@drawable/forget"
             android:gravity="start"
             android:paddingLeft="20dp"
-            android:text="NIM"
+            android:hint="NIM"
             android:textColor="#2d66dc"
             android:textSize="18dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:inputType="number"/>
 
         <EditText
             android:id="@+id/editTextNama"
@@ -50,30 +50,28 @@
             android:background="@drawable/forget"
             android:gravity="start"
             android:paddingLeft="20dp"
-            android:text="Nama"
+            android:hint="Nama"
             android:textColor="#2d66dc"
             android:textSize="18dp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editTextJenisKelamin"
-            android:layout_width="350dp"
-            android:layout_height="45dp"
-            android:background="@drawable/forget"
-            android:text="Jenis Kelamin"
-            android:textColor="#2d66dc"
             android:textStyle="bold"
-            android:textSize="18dp"
+            android:inputType="text"/>
+
+        <Spinner
+            android:id="@+id/spinnerJenisKelamin"
+            android:layout_width="327dp"
+            android:layout_height="50dp"
             android:layout_marginTop="20dp"
-            android:paddingLeft="20dp"
-            android:gravity="start"/>
+            android:layout_marginRight="20dp"
+            android:background="@drawable/forget"
+            android:entries="@array/myarray"
+            android:spinnerMode="dropdown" />
 
         <EditText
             android:id="@+id/editTextAlamat"
             android:layout_width="350dp"
             android:layout_height="45dp"
             android:background="@drawable/forget"
-            android:text="Alamat"
+            android:hint="Alamat"
             android:textColor="#2d66dc"
             android:textStyle="bold"
             android:textSize="18dp"
@@ -86,37 +84,39 @@
             android:layout_width="350dp"
             android:layout_height="45dp"
             android:background="@drawable/forget"
-            android:text="Password"
+            android:hint="Password"
             android:textColor="#2d66dc"
             android:textStyle="bold"
             android:textSize="18dp"
             android:layout_marginTop="20dp"
             android:paddingLeft="20dp"
-            android:gravity="start"/>
+            android:gravity="start"
+            android:inputType="textPassword"/>
 
         <EditText
             android:id="@+id/editTextConfirmPassword"
             android:layout_width="350dp"
             android:layout_height="45dp"
             android:background="@drawable/forget"
-            android:text="Confirm Password"
+            android:hint="Confirm Password"
             android:textColor="#2d66dc"
             android:textStyle="bold"
             android:textSize="18dp"
             android:layout_marginTop="20dp"
             android:paddingLeft="20dp"
-            android:gravity="start"/>
+            android:gravity="start"
+            android:inputType="textPassword"/>
 
         <EditText
             android:id="@+id/editTextUsername"
             android:layout_width="350dp"
             android:layout_height="45dp"
             android:background="@drawable/forget"
-            android:text="Username"
+            android:hint="Username"
             android:textColor="#2d66dc"
             android:textStyle="bold"
-            android:textSize="15dp"
-            android:layout_marginTop="15dp"
+            android:textSize="18dp"
+            android:layout_marginTop="20dp"
             android:paddingLeft="20dp"
             android:gravity="start"/>
 
@@ -138,7 +138,6 @@
             android:textStyle="bold"
             android:textSize="18dp"
             android:layout_marginTop="15dp"/>
-
 
     </LinearLayout>
 </LinearLayout>

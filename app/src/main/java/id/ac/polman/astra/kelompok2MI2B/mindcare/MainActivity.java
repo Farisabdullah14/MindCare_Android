@@ -8,6 +8,7 @@ import android.os.Bundle;
 
 /*import id.ac.polman.astra.kelompok2MI2B.mindcare.Fragment.HomeFragment;*/
 import id.ac.polman.astra.kelompok2MI2B.mindcare.Fragment.LoginFragment;
+import id.ac.polman.astra.kelompok2MI2B.mindcare.Fragment.RegisterFragment;
 import id.ac.polman.astra.kelompok2MI2B.mindcare.repository.PenggunaRepository;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,7 +25,13 @@ public class MainActivity extends AppCompatActivity {
         Fragment fragment = fm.findFragmentById(R.id.activity_main_fragment_container);
         if(fragment == null){
             fragment = new LoginFragment().newInstance();
+/*
+            fragment = new RegisterFragment().newInstance();
+*/
+
             fm.beginTransaction().replace(R.id.activity_main_fragment_container,fragment).commit();
         }
+
+
     }
 }
