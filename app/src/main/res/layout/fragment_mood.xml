@@ -35,7 +35,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="onIconClicked"
-                android:src="@drawable/emoji5" />
+                android:src="@drawable/emoji5"
+                android:background="@drawable/circle_background"/>
 
             <TextView
                 android:layout_width="wrap_content"
