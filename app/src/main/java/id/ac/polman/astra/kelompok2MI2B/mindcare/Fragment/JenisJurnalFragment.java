@@ -9,11 +9,11 @@ import androidx.fragment.app.Fragment;
 
 import id.ac.polman.astra.kelompok2MI2B.mindcare.R;
 
-public class DetailJurnalFragment extends Fragment {
+public class JenisJurnalFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_detail_jurnal, container, false);
+        return inflater.inflate(R.layout.fragmnet_jenis_jurnal, container, false);
     }
 }
