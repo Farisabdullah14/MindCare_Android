@@ -74,7 +74,8 @@ public class DashboardFragment extends Fragment {
         ImageView icon5 = bottomSheetDialog.findViewById(R.id.icon5);
 
         icon1.setOnClickListener(v -> {
-            // Logika yang akan dijalankan saat icon1 diklik
+            Fragment moodFragment = new MoodFragment();
+            replaceFragment(moodFragment);
             bottomSheetDialog.dismiss();
         });
 
