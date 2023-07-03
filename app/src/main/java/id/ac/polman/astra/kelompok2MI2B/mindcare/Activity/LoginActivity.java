@@ -56,7 +56,9 @@ public class LoginActivity extends AppCompatActivity {
             finish();
         } else{
             mLoginButton = (Button) findViewById(R.id.btn_login);
+/*
             mSignupButton = (TextView) findViewById(R.id.btn_daftar);
+*/
             mUsername = (EditText) findViewById(R.id.login_username);
             mPassword = (EditText) findViewById(R.id.login_password);
             /*mNoIdentitasLayout = (TextInputLayout) findViewById(R.id.no_identitas_Layout);
