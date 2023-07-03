@@ -40,10 +40,7 @@ public class LoginFragment extends Fragment {
         mButtonLogin = (Button) view.findViewById(R.id.loginButton);
 
 
-
         Bundle bundle = getArguments();
-
-
         FragmentManager fm = getActivity().getSupportFragmentManager();
 
 
