@@ -1,21 +1,27 @@
 package id.ac.polman.astra.kelompok2MI2B.mindcare.Activity;
 
-import android.content.SharedPreferences;
-import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.util.Log;
+
+/*import id.ac.polman.astra.kelompok2MI2B.mindcare.Fragment.HomeFragment;*/
 import id.ac.polman.astra.kelompok2MI2B.mindcare.Fragment.DashboardFragment;
 import id.ac.polman.astra.kelompok2MI2B.mindcare.Fragment.LoginFragment;
+import id.ac.polman.astra.kelompok2MI2B.mindcare.Fragment.RegisterFragment;
 import id.ac.polman.astra.kelompok2MI2B.mindcare.R;
+import id.ac.polman.astra.kelompok2MI2B.mindcare.repository.PenggunaRepository;
 import id.ac.polman.astra.kelompok2MI2B.mindcare.repository.RawRepository;
 
 public class MainActivity extends AppCompatActivity {
 
     private RawRepository mRawRepository;
     private SharedPreferences pref;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
             if(fragment == null){
 
                 fm.beginTransaction().add(R.id.activity_main_fragment_container,fragment)
-                         .addToBackStack(null)
+                        .addToBackStack(null)
                         .commit();
             } else {
                 fm.beginTransaction()

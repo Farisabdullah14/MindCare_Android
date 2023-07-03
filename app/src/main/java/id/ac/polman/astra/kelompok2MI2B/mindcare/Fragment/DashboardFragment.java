@@ -29,6 +29,9 @@ public class DashboardFragment extends Fragment {
     private FloatingActionButton fabButton;
     private BottomSheetDialog bottomSheetDialog;
     private LinearLayout moodIconLayout; // Tambahkan variabel ini
+    public static DashboardFragment newInstance(){
+        return new DashboardFragment();
+    }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -101,6 +104,7 @@ public class DashboardFragment extends Fragment {
         fragmentTransaction.replace(R.id.frame_layout, fragment);
         fragmentTransaction.commit();
     }
+
 
     // Fungsi replaceFragment() dan lainnya tetap sama seperti yang Anda miliki
     // ...
