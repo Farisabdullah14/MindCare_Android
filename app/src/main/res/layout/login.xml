@@ -11,7 +11,7 @@
     <ImageView
         android:layout_width="330dp"
         android:layout_height="300dp"
-        android:src="@drawable/asset3"
+        android:src="@drawable/ill_login"
         android:layout_marginTop="35dp"/>
 
     <TextView
@@ -26,6 +26,7 @@
         android:layout_marginTop="20dp"/>
 
     <EditText
+        android:visibility="visible"
         android:id="@+id/login_username"
         android:layout_width="350dp"
         android:layout_height="45dp"
@@ -94,10 +95,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:text="Don't have an account? Sign Up"
         android:textColor="#2d66dc"
-        android:textStyle="bold"
         android:textSize="18dp"
-        android:layout_marginTop="15dp"/>
+        android:textStyle="bold" />
 
 </LinearLayout>

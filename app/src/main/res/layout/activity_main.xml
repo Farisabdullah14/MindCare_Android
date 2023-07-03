@@ -11,25 +11,28 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/frame_layout" />
+        android:id="@+id/frame_layout" >
+
+    </FrameLayout>
 
     <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/bottomAppBar"
         android:layout_gravity="bottom"
         android:background="@color/white"
         app:fabCradleMargin="6dp"
-        app:fabCradleRoundedCornerRadius="20dp" >
+        app:fabCradleRoundedCornerRadius="20dp">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/bottomNavigationView"
             android:layout_marginEnd="20dp"
-            app:labelVisibilityMode="labeled"
             android:background="@android:color/transparent"
+            app:labelVisibilityMode="labeled"
             app:menu="@menu/buttom_menu" />
+
     </com.google.android.material.bottomappbar.BottomAppBar>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -43,5 +46,134 @@
         app:backgroundTint="@color/white"
         app:maxImageSize="56dp"
         app:layout_anchor="@id/bottomAppBar" />
+
+    <LinearLayout
+        android:id="@+id/mood_icon"
+        android:layout_width="330dp"
+        android:layout_height="234dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="5dp"
+
+        android:layout_marginBottom="90dp"
+        android:background="@color/biruPutih"
+        android:gravity="center"
+
+        android:padding="5dp"
+        app:fabCradleMargin="6dp"
+        app:layout_anchor="@+id/button_emote"
+        app:layout_anchorGravity="top|center"
+        android:visibility="gone">
+
+        <!-- Icon 1 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/icon1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onIconClicked"
+                android:src="@drawable/emoji5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Icon 1" />
+
+        </LinearLayout>
+
+        <!-- Icon 2 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/icon2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onIconClicked"
+                android:src="@drawable/emoji4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Icon 2" />
+
+        </LinearLayout>
+
+        <!-- Icon 3 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/icon3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onIconClicked"
+                android:src="@drawable/emoji3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Icon 3" />
+
+        </LinearLayout>
+
+        <!-- Icon 4 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/icon4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onIconClicked"
+                android:src="@drawable/emoji2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Icon 4" />
+
+        </LinearLayout>
+
+        <!-- Icon 5 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/icon5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onIconClicked"
+                android:src="@drawable/emoji1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Icon 5" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

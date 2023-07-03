@@ -1,9 +1,12 @@
 package id.ac.polman.astra.kelompok2MI2B.mindcare.Fragment;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AlphaAnimation;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,9 +24,11 @@ import id.ac.polman.astra.kelompok2MI2B.mindcare.databinding.ActivityMainBinding
 
 public class DashboardFragment extends Fragment {
     ActivityMainBinding binding;
+    private boolean isMoodIconVisible = false;
 
     private FloatingActionButton fabButton;
     private BottomSheetDialog bottomSheetDialog;
+    private LinearLayout moodIconLayout; // Tambahkan variabel ini
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -56,56 +61,47 @@ public class DashboardFragment extends Fragment {
             return true;
         });
 
-        fabButton = view.findViewById(R.id.button_emote);
-        fabButton.setOnClickListener(v -> showIconSheetDialog());
+        // Mengambil referensi ke LinearLayout mood_icon
+        moodIconLayout = view.findViewById(R.id.mood_icon);
 
-        BottomAppBar bottomAppBar = binding.bottomAppBar;
-        ((AppCompatActivity) getActivity()).setSupportActionBar(bottomAppBar);
+        moodIconLayout.setVisibility(View.GONE);
+        // Mengatur OnClickListener untuk button_emote
+        binding.buttonEmote.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Menampilkan atau menyembunyikan mood_icon tergantung dari keadaan sebelumnya
+                if (isMoodIconVisible) {
+                    fadeOutMoodIcon();
+                } else {
+                    fadeInMoodIcon();
+                }
+            }
+        });
     }
 
-    private void showIconSheetDialog() {
-        bottomSheetDialog = new BottomSheetDialog(getActivity());
-        bottomSheetDialog.setContentView(R.layout.sheet_icon);
-
-        ImageView icon1 = bottomSheetDialog.findViewById(R.id.icon1);
-        ImageView icon2 = bottomSheetDialog.findViewById(R.id.icon2);
-        ImageView icon3 = bottomSheetDialog.findViewById(R.id.icon3);
-        ImageView icon4 = bottomSheetDialog.findViewById(R.id.icon4);
-        ImageView icon5 = bottomSheetDialog.findViewById(R.id.icon5);
-
-        icon1.setOnClickListener(v -> {
-            Fragment moodFragment = new MoodFragment();
-            replaceFragment(moodFragment);
-            bottomSheetDialog.dismiss();
-        });
-
-        icon2.setOnClickListener(v -> {
-            // Logika yang akan dijalankan saat icon2 diklik
-            bottomSheetDialog.dismiss();
-        });
-
-        icon3.setOnClickListener(v -> {
-            // Logika yang akan dijalankan saat icon3 diklik
-            bottomSheetDialog.dismiss();
-        });
-
-        icon4.setOnClickListener(v -> {
-            // Logika yang akan dijalankan saat icon4 diklik
-            bottomSheetDialog.dismiss();
-        });
-
-        icon5.setOnClickListener(v -> {
-            // Logika yang akan dijalankan saat icon5 diklik
-            bottomSheetDialog.dismiss();
-        });
-
-        bottomSheetDialog.show();
+    private void fadeInMoodIcon() {
+        AlphaAnimation alphaAnimation = new AlphaAnimation(0.0f, 1.0f);
+        alphaAnimation.setDuration(500);
+        alphaAnimation.setFillAfter(true);
+        moodIconLayout.startAnimation(alphaAnimation);
+        moodIconLayout.setVisibility(View.VISIBLE);
+        isMoodIconVisible = true;
     }
-
+    private void fadeOutMoodIcon() {
+        AlphaAnimation alphaAnimation = new AlphaAnimation(1.0f, 0.0f);
+        alphaAnimation.setDuration(500);
+        alphaAnimation.setFillAfter(true);
+        moodIconLayout.startAnimation(alphaAnimation);
+        moodIconLayout.setVisibility(View.GONE);
+        isMoodIconVisible = false;
+    }
     private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getParentFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frame_layout, fragment);
         fragmentTransaction.commit();
     }
+
+    // Fungsi replaceFragment() dan lainnya tetap sama seperti yang Anda miliki
+    // ...
 }

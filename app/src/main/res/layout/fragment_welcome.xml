@@ -10,7 +10,7 @@
     <ImageView
         android:layout_width="350dp"
         android:layout_height="350dp"
-        android:src="@drawable/asset2"
+        android:src="@drawable/ill_wel"
         android:layout_marginTop="40dp"/>
 
     <TextView

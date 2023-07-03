@@ -73,7 +73,7 @@
                     android:layout_height="100dp"
                     android:layout_alignParentRight="true"
                     android:maxHeight="100dp"
-                    android:src="@drawable/arrow_bottom" />
+                    android:src="@drawable/profile" />
 
 
             </RelativeLayout>
