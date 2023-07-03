@@ -1,23 +1,36 @@
 package id.ac.polman.astra.kelompok2MI2B.mindcare.Model;
 
-import androidx.annotation.NonNull;
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
-@Entity
+
 public class Pengguna {
-    @PrimaryKey
-    @NonNull
+    @SerializedName("id_user")
+    @Expose
     private int mid_user;
+
+    @SerializedName("NIM")
+    @Expose
     private String mNIM;
+
+    @SerializedName("nama")
+    @Expose
     private String mNama;
-    private String mUsername;
+
+    @SerializedName("password")
+    @Expose
     private String mPassword;
 
+    @SerializedName("alamat")
+    @Expose
     private String mAlamat;
 
+    @SerializedName("jenis_kelamin")
+    @Expose
     private String mjenis_kelamin;
 
+    @SerializedName("status")
+    @Expose
     private String status;
 
 
@@ -25,15 +38,13 @@ public class Pengguna {
 
     }
 
-
-    public Pengguna(int id_user, String NIM, String nama, String username, String password, String alamat, String jenisKelamin, String status) {
-        mid_user = id_user;
+    public Pengguna(int mid_user, String NIM, String nama, String password, String alamat, String mjenis_kelamin, String status) {
+        this.mid_user = mid_user;
         mNIM = NIM;
         mNama = nama;
-        mUsername = username;
         mPassword = password;
         mAlamat = alamat;
-        mjenis_kelamin = jenisKelamin;
+        this.mjenis_kelamin = mjenis_kelamin;
         this.status = status;
     }
 
@@ -44,15 +55,6 @@ public class Pengguna {
     public void setMid_user(int mid_user) {
         this.mid_user = mid_user;
     }
-
-    public String getMjenis_kelamin() {
-        return mjenis_kelamin;
-    }
-
-    public void setMjenis_kelamin(String mjenis_kelamin) {
-        this.mjenis_kelamin = mjenis_kelamin;
-    }
-
 
     public String getNIM() {
         return mNIM;
@@ -70,14 +72,6 @@ public class Pengguna {
         mNama = nama;
     }
 
-    public String getUsername() {
-        return mUsername;
-    }
-
-    public void setUsername(String username) {
-        mUsername = username;
-    }
-
     public String getPassword() {
         return mPassword;
     }
@@ -92,6 +86,14 @@ public class Pengguna {
 
     public void setAlamat(String alamat) {
         mAlamat = alamat;
+    }
+
+    public String getMjenis_kelamin() {
+        return mjenis_kelamin;
+    }
+
+    public void setMjenis_kelamin(String mjenis_kelamin) {
+        this.mjenis_kelamin = mjenis_kelamin;
     }
 
     public String getStatus() {

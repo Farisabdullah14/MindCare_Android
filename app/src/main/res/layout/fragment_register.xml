@@ -56,15 +56,17 @@
             android:textStyle="bold"
             android:inputType="text"/>
 
-        <Spinner
-            android:id="@+id/spinnerJenisKelamin"
-            android:layout_width="327dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/forget"
-            android:entries="@array/myarray"
-            android:spinnerMode="dropdown" />
+            <RadioButton
+                android:id="@+id/rbLakiLaki"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laki-laki" />
+
+            <RadioButton
+                android:id="@+id/rbPerempuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perempuan" />
 
         <EditText
             android:id="@+id/editTextAlamat"
@@ -107,20 +109,8 @@
             android:gravity="start"
             android:inputType="textPassword"/>
 
-        <EditText
-            android:id="@+id/editTextUsername"
-            android:layout_width="350dp"
-            android:layout_height="45dp"
-            android:background="@drawable/forget"
-            android:hint="Username"
-            android:textColor="#2d66dc"
-            android:textStyle="bold"
-            android:textSize="18dp"
-            android:layout_marginTop="20dp"
-            android:paddingLeft="20dp"
-            android:gravity="start"/>
-
         <Button
+            android:id="@+id/btn_register"
             android:layout_width="350dp"
             android:layout_height="50dp"
             android:background="@drawable/button"

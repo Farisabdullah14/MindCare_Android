@@ -23,8 +23,11 @@ public interface PenggunaService {
     @GET("users")
     Call<List<Pengguna>> getPenggunas();
 
-    @POST("user")
-    Call<Pengguna> addPengguna(@Body Pengguna pengguna);
+/*    @POST("user")
+    Call<Pengguna> addPengguna(@Body Pengguna pengguna);*/
+    @POST("savepengguna")
+    Call<Pengguna> savePengguna(@Body Pengguna pengguna);
+
 
     @PUT("user")
     Call<Pengguna> updatePengguna(@Body Pengguna pengguna);
