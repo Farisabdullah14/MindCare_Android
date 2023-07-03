@@ -7,7 +7,7 @@ import android.util.Log;
 import androidx.lifecycle.MutableLiveData;
 
 
-
+import java.io.IOException;
 import java.util.List;
 
 import id.ac.polman.astra.kelompok2MI2B.mindcare.Api.ApiUtils;
@@ -100,24 +100,6 @@ public class PenggunaRepository {
         });
     }
 
-    public void addPengguna(Pengguna pengguna){
-        Log.i(TAG, "addPengguna() called");
-        Call<Pengguna> call = mPenggunaService.addPengguna(pengguna);
-        call.enqueue(new Callback<Pengguna>() {
-            @Override
-            public void onResponse(Call<Pengguna> call, Response<Pengguna> response) {
-                if(response.isSuccessful()){
-                    Log.i(TAG, "Pengguna added " + pengguna.getNama());
-                }
-            }
-
-            @Override
-            public void onFailure(Call<Pengguna> call, Throwable t) {
-
-            }
-        });
-    }
-
     public void deletePengguna(int penggunaId){
         Log.i(TAG, "deleteUser() called");
         Call<Pengguna> call = mPenggunaService.deletePenggunaById(penggunaId);
@@ -132,6 +114,37 @@ public class PenggunaRepository {
             @Override
             public void onFailure(Call<Pengguna> call, Throwable t) {
                 Log.e("Error API call : ", t.getMessage());
+            }
+        });
+    }
+
+    public void savepengguna(Pengguna pengguna) {
+        Log.i(TAG, "savePengguna() called");
+        Call<Pengguna> call = mPenggunaService.savePengguna(pengguna);
+        call.enqueue(new Callback<Pengguna>() {
+
+            @Override
+            public void onResponse(Call<Pengguna> call, Response<Pengguna> response) {
+                if (response.isSuccessful()) {
+                    Log.i(TAG, "Pengguna added " + pengguna.getNama());
+                    System.out.println("NIM di repo" + pengguna.getNIM());
+                } else {
+                    String errorMessage = "";
+                    if (response.errorBody() != null) {
+                        try {
+                            errorMessage = response.errorBody().string();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    Log.e(TAG, "Failed to add Pengguna: " + errorMessage);
+                }
+            }
+
+
+            @Override
+            public void onFailure(Call<Pengguna> call, Throwable t) {
+                Log.e(TAG, "An error occurred", t);
             }
         });
     }
