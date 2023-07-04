@@ -5,7 +5,7 @@
       <map>
         <entry key="..\:/Semester 4/Project/PRG 6/MindCare_Android/app/src/main/res/drawable-v24/background_alert_dialog.xml" value="0.118" />
         <entry key="..\:/Semester 4/Project/PRG 6/MindCare_Android/app/src/main/res/drawable/button.xml" value="0.1405" />
-        <entry key="..\:/Semester 4/Project/PRG 6/MindCare_Android/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Semester 4/Project/PRG 6/MindCare_Android/app/src/main/res/layout/activity_main.xml" value="0.14666666666666667" />
         <entry key="..\:/Semester 4/Project/PRG 6/MindCare_Android/app/src/main/res/layout/activity_main_kosong.xml" value="0.1" />
         <entry key="..\:/Semester 4/Project/PRG 6/MindCare_Android/app/src/main/res/layout/alamat_psikolog.xml" value="0.22" />
         <entry key="..\:/Semester 4/Project/PRG 6/MindCare_Android/app/src/main/res/layout/dialog_status.xml" value="0.1" />
@@ -13,13 +13,14 @@
         <entry key="..\:/Semester 4/Project/PRG 6/MindCare_Android/app/src/main/res/layout/fragment_home.xml" value="0.2875" />
         <entry key="..\:/Semester 4/Project/PRG 6/MindCare_Android/app/src/main/res/layout/fragment_jornal.xml" value="0.3333333333333333" />
         <entry key="..\:/Semester 4/Project/PRG 6/MindCare_Android/app/src/main/res/layout/fragment_mood.xml" value="0.1" />
-        <entry key="..\:/Semester 4/Project/PRG 6/MindCare_Android/app/src/main/res/layout/fragment_profil.xml" value="0.13333333333333333" />
+        <entry key="..\:/Semester 4/Project/PRG 6/MindCare_Android/app/src/main/res/layout/fragment_profil.xml" value="0.14666666666666667" />
         <entry key="..\:/Semester 4/Project/PRG 6/MindCare_Android/app/src/main/res/layout/fragment_register.xml" value="0.1" />
         <entry key="..\:/Semester 4/Project/PRG 6/MindCare_Android/app/src/main/res/layout/fragment_statistik.xml" value="0.1" />
         <entry key="..\:/Semester 4/Project/PRG 6/MindCare_Android/app/src/main/res/layout/fragment_welcome.xml" value="0.10666666666666667" />
         <entry key="..\:/Semester 4/Project/PRG 6/MindCare_Android/app/src/main/res/layout/fragmnet_jenis_jurnal.xml" value="0.14666666666666667" />
         <entry key="..\:/Semester 4/Project/PRG 6/MindCare_Android/app/src/main/res/layout/login.xml" value="0.1782178217821782" />
         <entry key="..\:/Semester 4/Project/PRG 6/MindCare_Android/app/src/main/res/layout/sheet_icon.xml" value="0.1" />
+        <entry key="..\:/Semester 4/Project/PRG 6/MindCare_Android/app/src/main/res/menu/buttom_menu.xml" value="0.1" />
       </map>
     </option>
   </component>

@@ -26,7 +26,6 @@
         android:layout_marginTop="20dp"/>
 
     <EditText
-        android:visibility="visible"
         android:id="@+id/login_username"
         android:layout_width="350dp"
         android:layout_height="45dp"
@@ -38,32 +37,12 @@
         android:layout_marginTop="30dp"
         android:paddingLeft="20dp"/>
 
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="350dp"
-        android:layout_height="45dp"
-        android:hint="Password"
-        app:passwordToggleEnabled="true"
-        android:textStyle="bold"
-        android:textSize="18dp"
-        android:layout_marginTop="20dp"
-        app:endIconMode="password_toggle">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:inputType="textPassword" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
     <EditText
         android:id="@+id/login_password"
         android:layout_width="350dp"
         android:layout_height="45dp"
         android:background="@drawable/forget"
         android:hint="Password"
-        app:passwordToggleEnabled="true"
         android:textColor="#2d66dc"
         android:textStyle="bold"
         android:textSize="18dp"
