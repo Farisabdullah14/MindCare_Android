@@ -15,7 +15,8 @@
     <color name="colorAccent">#D81B60</color>
 
     <color name="dialog_background">#ffffff</color>
-    <color name="dialog_text">#000000</color>
+    <color name="dialog_text">#000000</color>#6ba6ff
     <color name="dialog_divider">#e6cdb8</color>
+    <color name="biru_pudar">#6ba6ff</color>
 
 </resources>

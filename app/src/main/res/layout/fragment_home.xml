@@ -99,8 +99,7 @@
                 android:layout_height="65dp"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="25dp"
-                android:background="@drawable/c1" />
-
+                android:background="@drawable/icon_test2" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -138,9 +137,9 @@
             <ImageView
                 android:layout_width="65dp"
                 android:layout_height="65dp"
-                android:background="@drawable/c2"
+                android:layout_centerVertical="true"
                 android:layout_marginLeft="25dp"
-                android:layout_centerVertical="true"/>
+                android:background="@drawable/icon_maps" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -177,9 +176,9 @@
             <ImageView
                 android:layout_width="65dp"
                 android:layout_height="65dp"
-                android:background="@drawable/c3"
+                android:layout_centerVertical="true"
                 android:layout_marginLeft="25dp"
-                android:layout_centerVertical="true"/>
+                android:background="@drawable/c3" />
 
             <TextView
                 android:layout_width="250dp"
@@ -216,9 +215,9 @@
             <ImageView
                 android:layout_width="65dp"
                 android:layout_height="65dp"
-                android:background="@drawable/c5"
+                android:layout_centerVertical="true"
                 android:layout_marginLeft="25dp"
-                android:layout_centerVertical="true"/>
+                android:background="@drawable/icon_contacts" />
 
             <TextView
                 android:layout_width="wrap_content"

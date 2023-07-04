@@ -44,7 +44,7 @@
                 android:id="@+id/Button_id_jurnal_01"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/cardview_dark_background"
+                android:background="@color/biru_pudar"
                 android:padding="10dp">
 
                 <TextView
@@ -72,8 +72,8 @@
                     android:layout_width="150dp"
                     android:layout_height="100dp"
                     android:layout_alignParentRight="true"
-                    android:maxHeight="100dp"
-                    android:src="@drawable/profile" />
+                    android:maxHeight="10dp"
+                    android:src="@drawable/ill_jurnal_2" />
 
 
             </RelativeLayout>
@@ -95,7 +95,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/cardview_dark_background"
+                android:background="@color/biru_pudar"
                 android:padding="10dp">
 
                 <TextView
@@ -148,7 +148,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/cardview_dark_background"
+                android:background="@color/biru_pudar"
                 android:padding="10dp">
 
                 <TextView
@@ -201,7 +201,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/cardview_dark_background"
+                android:background="@color/biru_pudar"
                 android:padding="10dp">
 
                 <TextView

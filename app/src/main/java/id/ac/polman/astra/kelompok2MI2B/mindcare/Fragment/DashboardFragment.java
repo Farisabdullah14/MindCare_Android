@@ -26,6 +26,8 @@ public class DashboardFragment extends Fragment {
     ActivityMainBinding binding;
     private boolean isMoodIconVisible = false;
 
+    private ImageView selectedIcon;
+
     private FloatingActionButton fabButton;
     private BottomSheetDialog bottomSheetDialog;
     private LinearLayout moodIconLayout; // Tambahkan variabel ini
@@ -72,14 +74,41 @@ public class DashboardFragment extends Fragment {
         binding.buttonEmote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 // Menampilkan atau menyembunyikan mood_icon tergantung dari keadaan sebelumnya
                 if (isMoodIconVisible) {
                     fadeOutMoodIcon();
+                    binding.icon1.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            showSelectedIcon(binding.icon1);
+                        }
+                    });
                 } else {
                     fadeInMoodIcon();
                 }
             }
         });
+    }
+
+    private void showSelectedIcon(ImageView icon) {
+        // Clear the selection from the previous icon if any
+        if (selectedIcon != null) {
+            selectedIcon.setBackgroundResource(0);
+        }
+
+        // Set the background for the selected icon
+        icon.setBackgroundResource(R.drawable.circle_background);
+
+        // Store the selected icon for reference
+        selectedIcon = icon;
+
+        // Pass the selected icon to fragment_mood if it is visible
+        Fragment fragment = getParentFragmentManager().findFragmentById(R.id.frame_layout);
+        if (fragment instanceof MoodFragment && ((MoodFragment) fragment).isVisible()) {
+            ((MoodFragment) fragment).showSelectedIcon(icon);
+        }
+    
     }
 
     private void fadeInMoodIcon() {
