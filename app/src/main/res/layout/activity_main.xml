@@ -45,26 +45,35 @@
         android:tint="@color/biru"
         app:backgroundTint="@color/white"
         app:maxImageSize="56dp"
-        app:layout_anchor="@id/bottomAppBar" />
+        app:layout_anchor="@id/bottomAppBar"
+        />
 
     <LinearLayout
         android:id="@+id/mood_icon"
         android:layout_width="370dp"
-        android:layout_height="234dp"
+        android:layout_height="176dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="5dp"
-
         android:layout_marginBottom="90dp"
         android:background="@color/biruPutih"
         android:gravity="center"
-
+        android:orientation="vertical"
         android:padding="5dp"
+        android:visibility="gone"
         app:fabCradleMargin="6dp"
         app:layout_anchor="@+id/button_emote"
-        app:layout_anchorGravity="top|center"
-        android:visibility="gone">
+        app:layout_anchorGravity="top|center">
+
+        <TextView
+            android:id="@+id/nama_text"
+            android:layout_width="wrap_content"
+            android:layout_height="41dp"
+            android:text="Bagaimana perasaanmu ?"
+            app:layout_anchor="@+id/mood_icon"
+            app:layout_anchorGravity="top|center" />
 
         <LinearLayout
+            android:id="@+id/mood"
             android:layout_width="348dp"
             android:layout_height="wrap_content">
 
@@ -87,7 +96,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Icon 1" />
+                    android:gravity="center"
+
+                    android:text="Sangat Buruk" />
 
             </LinearLayout>
 
@@ -109,7 +120,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Icon 2" />
+                    android:text="Buruk" />
 
             </LinearLayout>
 
@@ -131,7 +142,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Icon 3" />
+                    android:text="Biasa" />
 
             </LinearLayout>
 
@@ -153,7 +164,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Icon 4" />
+                    android:text="Baik" />
 
             </LinearLayout>
 
@@ -175,7 +186,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Icon 5" />
+                    android:text="Luar biasa" />
 
             </LinearLayout>
 
@@ -185,12 +196,5 @@
 
     </LinearLayout>
 
-    <TextView
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:text="Icon 1"
-        app:layout_anchor="@+id/mood_icon"
-        app:layout_anchorGravity="top|center" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
